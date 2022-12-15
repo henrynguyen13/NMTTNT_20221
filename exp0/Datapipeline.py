@@ -71,6 +71,7 @@ def Datapipeline(df):
     full_pp.fit(customers_train, labels_train)
     pred_train = full_pp.predict(customers_train)
     pred_val = full_pp.predict(customers_val)
+
     print("---------------------------------------")
     print_score(labels_train, pred_train)
     print("---------------------------------------")
