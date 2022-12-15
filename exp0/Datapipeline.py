@@ -1,10 +1,3 @@
-def print_score(labels, pred):
-    from sklearn.metrics import recall_score, accuracy_score, precision_score, f1_score
-    print("Accuracy", accuracy_score(labels, pred))
-    print("Precision", precision_score(labels, pred))
-    print("Recall", recall_score(labels, pred))
-    print("F1", f1_score(labels, pred))
-
 def Datapipeline():
     from sklearn.compose import ColumnTransformer
     from sklearn.tree import DecisionTreeClassifier
@@ -34,8 +27,8 @@ def Datapipeline():
 
     full_pp = Pipeline(
         steps=[
-            ("preprocessor", preprocessor), 
-            ("classifier", DecisionTreeClassifier(random_state=42))
+            ("preprocessor", preprocessor)
+            # ("classifier", DecisionTreeClassifier(random_state=42))
         ]
     )
 
